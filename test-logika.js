@@ -1,23 +1,9 @@
-const character = '#';
-const count = 8;
-const rows = [];
-
-function padRow(rowNumber, rowCount) {
-  return (
-    ' '.repeat(rowCount - rowNumber) +
-    character.repeat(2 * rowNumber - 1) +
-    ' '.repeat(rowCount - rowNumber)
-  );
+function hitungTotal(array) {
+  let total = 0;
+  for (let i = 0; i < array.length; i++) {
+    total += array[i];
+  }
+  return total;
 }
 
-for (let i = 0; i < count; i++) {
-  rows.push(padRow(i + 1, count));
-}
-
-let result = '';
-
-for (const row of rows) {
-  result += row + '\n';
-}
-
-console.log(result);
+console.log(hitungTotal([1, 2, 3, 4, 5]));
