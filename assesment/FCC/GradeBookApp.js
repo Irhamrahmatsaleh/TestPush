@@ -7,8 +7,8 @@ function getAverage(scores) {
   }
   return sum / scores.length;
 }
-getAverage([92, 88, 12, 77, 57, 100, 67, 38, 97, 89]);
-getAverage([45, 87, 98, 100, 86, 94, 67, 88, 94, 95]);
+// console.log(getAverage([92, 88, 12, 77, 57, 100, 67, 38, 97, 89]));
+// console.log(getAverage([45, 87, 98, 100, 86, 94, 67, 88, 94, 95]));
 
 // 2. Create a function named getGrade that takes a score as an argument and returns a letter grade for the score.
 function getGrade(score) {
@@ -26,7 +26,19 @@ function getGrade(score) {
     return 'F';
   }
 }
+// console.log(getGrade(96));
+// console.log(getGrade(82));
+// console.log(getGrade(56));
 
-console.log(getGrade(96));
-console.log(getGrade(82));
-console.log(getGrade(56));
+// 3. Create a function named hasPassingGrade that takes a score as an argument and returns true if the score is passing and false if it is not.
+function hasPassingGrade(score) {
+  let grade = getGrade(score);
+  if (grade !== 'F') {
+    return true;
+  } else {
+    return false;
+  }
+}
+console.log(hasPassingGrade(100));
+console.log(hasPassingGrade(53));
+console.log(hasPassingGrade(87));
