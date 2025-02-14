@@ -1,9 +1,17 @@
+// function getAverage(scores) {
+//   let total = 0;
+//   for (let i = 0; i < scores.length; i++) {
+//     total += scores[i];
+//   }
+//   return total / scores.length;
+// }
+
 function getAverage(scores) {
-  let total = 0;
-  for (let i = 0; i < scores.length; i++) {
-    total += scores[i];
+  let sum = 0;
+  for (const score of scores) {
+    sum += score;
   }
-  return total / scores.length;
+  return sum / scores.length;
 }
 
 console.log(getAverage([92, 88, 12, 77, 57, 100, 67, 38, 97, 89]));
