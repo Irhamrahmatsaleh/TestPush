@@ -7,8 +7,6 @@ function getAverage(scores) {
   }
   return sum / scores.length;
 }
-// console.log(getAverage([92, 88, 12, 77, 57, 100, 67, 38, 97, 89]));
-// console.log(getAverage([45, 87, 98, 100, 86, 94, 67, 88, 94, 95]));
 
 // 2. Create a function named getGrade that takes a score as an argument and returns a letter grade for the score.
 function getGrade(score) {
@@ -26,9 +24,6 @@ function getGrade(score) {
     return 'F';
   }
 }
-// console.log(getGrade(96));
-// console.log(getGrade(82));
-// console.log(getGrade(56));
 
 // 3. Create a function named hasPassingGrade that takes a score as an argument and returns true if the score is passing and false if it is not.
 function hasPassingGrade(score) {
@@ -39,6 +34,18 @@ function hasPassingGrade(score) {
     return false;
   }
 }
-console.log(hasPassingGrade(100));
-console.log(hasPassingGrade(53));
-console.log(hasPassingGrade(87));
+
+// 4. Create a function named studentMsg that takes an array of scores and a student's score as arguments and returns a message to the student.
+function studentMsgg(totalScores, studentScore) {
+  let classAverage = getAverage(totalScores);
+  let studentGrade = getGrade(studentScore);
+  let passed = hasPassingGrade(studentScore);
+  let message = 'Class average: ' + classAverage + '. Your grade: ' + studentGrade + '. ';
+
+  if (passed) {
+    message += 'You passed the course.';
+  } else {
+    message += 'You failed the course.';
+  }
+}
+console.log(studentMsg([92, 88, 12, 77, 57, 100, 67, 38, 97, 89], 37));
