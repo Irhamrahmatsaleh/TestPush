@@ -36,7 +36,7 @@ function hasPassingGrade(score) {
 }
 
 // 4. Create a function named studentMsg that takes an array of scores and a student's score as arguments and returns a message to the student.
-function studentMsgg(totalScores, studentScore) {
+function studentMsg(totalScores, studentScore) {
   let classAverage = getAverage(totalScores);
   let studentGrade = getGrade(studentScore);
   let passed = hasPassingGrade(studentScore);
