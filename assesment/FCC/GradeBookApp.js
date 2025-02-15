@@ -11,7 +11,7 @@ function getAverage(scores) {
 // 2. Create a function named getGrade that takes a score as an argument and returns a letter grade for the score.
 function getGrade(score) {
   if (score === 100) {
-    return 'A+';
+    return 'A++';
   } else if (score >= 90) {
     return 'A';
   } else if (score >= 80) {
