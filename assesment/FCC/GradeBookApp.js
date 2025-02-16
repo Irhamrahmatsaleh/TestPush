@@ -27,12 +27,7 @@ function getGrade(score) {
 
 // 3. Create a function named hasPassingGrade that takes a score as an argument and returns true if the score is passing and false if it is not.
 function hasPassingGrade(score) {
-  let grade = getGrade(score);
-  if (grade !== 'F') {
-    return true;
-  } else {
-    return false;
-  }
+  return getGrade(score) !== 'F';
 }
 
 // 4. Create a function named studentMsg that takes an array of scores and a student's score as arguments and returns a message to the student.
